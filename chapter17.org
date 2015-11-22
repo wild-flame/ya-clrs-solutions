@@ -1,0 +1,28 @@
+** 17.4
+*** 17.3-4
+
+Let \Phi be the potential function that returns the number of elements in the
+stack. We know that for this potential function, we have amortized cost 2 for
+PUSH operation and amortized cost 0 for POP and MULTIPOP operations.
+
+The total amortized cost is 
+
+$$
+\sum^{n}_{i=1}\hat{c}_i = \sum^{n}_{i=1} c_i + \Phi(D_n) - \Phi(D_0)
+$$
+
+Using the potential function adn the known amortized costs, we can rewrite the equation as
+
+#+BEGIN_LaTex
+
+\begin{align*}
+\sum^{n}_{i=1}c_i &= \sum^{n}_{i=1} \hat{c}_i - \Phi(D_n) + \Phi(D_0) \\
+        &= \sum^{n}_{i=1} \hat{c}_i + s_0 - s_n \\
+        &                 \le 2n + s_0 - s_n
+\end{align*}
+
+#+END_LaTex
+
+which gives us the total cost of O(n + (s_0 − s_n)). If sn \ge s_0, then this
+equals to O(n), that is, if the stack grows, then the work done is limited by
+the number of operations. 
