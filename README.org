@@ -5,7 +5,7 @@ yet-another-clrs-solutions written with the help of emacs org-mode.
 ** Content
    - [[Chapter1.org][Chapter1]]
    - [[Chapter2.org][Chapter2]]
-   - [[Chapter17.org][Chapter17]]
+   - [[file:chapter17.org][Chapter17]]
 ** About
    
 All these anwsers are written here mainly for the purpose of myself to
