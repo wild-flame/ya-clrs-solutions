@@ -1,9 +1,9 @@
 #+OPTIONS: num:1 toc:2
 
 
-* Chapter 1
+* Chapter 1.1
 
-** Exercise 1.1-1 
+** Exercise 1.1-1
 
 Give a real-world example that requires sorting or a real-world example
 that requires computing a convex hull.
@@ -53,7 +53,6 @@ They are similar because both problem are intended to find the something
 shortest. However, the first one only intended to find a single path while the
 second one may include several steps in finding a single path.
 
-
 ** Exercise 1.1-5
 
 Come up with a real-world problem in which only the best solution will do. Then
@@ -65,3 +64,56 @@ enough
 *Only the best*: Sorting a phone book. Making a dictinary or something like that, etc.
 
 *Approximate is okay*: Try to maximum the profit. Find some company to invest, etc.
+
+* Chapter 1.2
+
+** 1.2-1
+
+Give an example of an application that requires algorithmic content at the
+application level, and discuss the function of the algorithms involved.
+
+*** Solution:
+    
+Google Maps, Recommendation system, Games, etc.
+
+These Alogrithms plays an important role in these apps.
+
+** 1.2-2
+
+Suppose we are comparing implementations of insertion sort and merge sort on the
+same machine. For inputs of size n, insertion sort runs in 8n^2 steps, while
+merge sort runs in 64nlgn steps. For which values of n does insertion sort
+beat merge sort?
+
+*** Solution
+
+At n>43 merge sort beats insertion sort.
+
+** 1.2-3
+
+What is the smallest value of n such that an algorithm whose running time is
+100n^2 runs faster than an algorithm whose running time is 2^n on the same
+machine?
+
+*** Solution
+
+n = 15
+
+* Problems
+
+** 1.1
+   
+Solution:
+
+Suppose $\hat{n}$ is the total steps
+
+|               | 1 second | 1 minute       | 1 hour       | 1 day         | 1 month           |             1 year | 1 century          |
+|---------------+----------+----------------+--------------+---------------+-------------------+--------------------+--------------------|
+| lgn           | 2^{10^6} | 2^{6\cdot10^7} | etc..        | ...           | 2^{\hat{n}}       |                    |                    |
+| \sqrt{n}      |    10^12 | 3.6\cdot10^15  | etc..        | ...           | ${\hat{n}}^2$     |                    |                    |
+| $n = \hat{n}$ |     10^6 | 6\cdot10^7     | 3.6\cdot10^8 | 8.64\cdot10^9 | 2.592 \cdot 10^11 | 3.1536 \cdot 10^12 | 3.1536 \cdot 10^14 |
+| n lg n        |    62746 | 2801417        | 133378058    | 2755147513    | 71870856404       |       797633893349 | 6854697441062      |
+| n^2           |     1000 | 7745           | 60000        | 293938        | 1609968           |            5615692 | 56175382           |
+| n^3           |      100 | 391            | 1532         | 4420          | 13736             |              31593 | 146677             |
+| 2^n           |       19 | 25             | 31           | 36            | 41                |                 44 | 51                 |
+| n!            |        9 | 11             | 12           | 13            | 15                |                 16 | 17                 |
